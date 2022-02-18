@@ -1,0 +1,49 @@
+body {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow:column wrap;
+}
+
+p,#txtSearch,label {
+	text-align:center;
+	font-weight:bold;
+	font-size:25px;
+	font-family:Consolas;
+}
+
+#container {
+	width:30vw;
+	height:auto;
+	border:1px solid silver;
+	border-radius:8px;
+	padding:10px;
+	box-shadow:5px 5px 15px silver;
+}
+
+#searchContainer {
+	width:45vw;
+}
+
+#pkmImage {
+	width:50%;
+}
+
+/* label {font-weight:bold;} */
+
+#btnSearch {
+	padding:4px;
+	cursor:pointer;
+	width:50%;
+	background:darkorange;
+	font-weight:bold;
+	border:none;
+	border-radius:5px;
+}
+
+#container {
+	display:flex;
+	flex-flow:column wrap;
+	justify-content:center;
+	align-items:center;
+}
