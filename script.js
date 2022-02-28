@@ -28,7 +28,7 @@ const allTypes = {
 
 txtSearch.addEventListener('keyup', async (e) => {
 	if(e.keyCode === 13){
-		const data = await getPKMInfo(e.target.value)
+		const data = await getPKMInfo(e.target.value.toLowerCase())
 		pkmImage.src = `${data.sprites.other.dream_world.front_default}`
 		
 		pkmName.textContent = data.name

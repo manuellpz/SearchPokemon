@@ -13,46 +13,28 @@ p,#txtSearch,label {
 }
 
 #container {
-	width:30vw;
+	width:65vw;
 	height:auto;
 	border:1px solid silver;
 	border-radius:8px;
 	padding:10px;
 	box-shadow:5px 5px 15px silver;
+	display: block;
 }
 
 #searchContainer {
-	width:45vw;
+	width:65vw;
 }
 
 #pkmImage {
 	width:50%;
-}
-
-/* label {font-weight:bold;} */
-
-#btnSearch {
-	padding:4px;
-	cursor:pointer;
-	width:50%;
-	background:darkorange;
-	font-weight:bold;
-	border:none;
-	border-radius:5px;
-}
-
-#container {
-	display:flex;
-	flex-flow:column wrap;
-	justify-content:center;
-	align-items:center;
+	display: block;
+	margin: auto;
 }
 
 #listTypes {
 	display:flex;
 	flex-flow: column wrap;
-	justify-content: center;
-	align-items: center;
 }
 
 #listTypes > li {
@@ -60,8 +42,11 @@ p,#txtSearch,label {
 	color:white;
 	border-radius:5px;
 	text-shadow: 1px 1px 1px black;
+	text-align:center;
+	font-family: monospace;
 	font-weight: bold;
+	font-size: larger;
 	list-style: none;
-	width: 100%;
+	width: 80%;
 	margin-bottom: 10px;
 }
