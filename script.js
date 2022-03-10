@@ -4,6 +4,7 @@ const pkmName = document.querySelector('#pkmName')
 const listTypes = document.querySelector('#listTypes')
 const pkmWeight = document.querySelector('#pkmWeight')
 const pkmHeight = document.querySelector('#pkmHeight')
+const listMoves = document.querySelector('#listMoves')
 
 const allTypes = {
 	fire:'#f08030',
@@ -29,10 +30,23 @@ const allTypes = {
 txtSearch.addEventListener('keyup', async (e) => {
 	if(e.keyCode === 13){
 		const data = await getPKMInfo(e.target.value.toLowerCase())
-		pkmImage.src = `${data.sprites.other.dream_world.front_default}`
+		pkmImage.src = `${data.sprites.other.home.front_default}`
 		
 		pkmName.textContent = data.name
 		listTypes.innerHTML = ''
+		listMoves.innerHTML = '<option>Movimientos: </option>'
+
+		data.moves.map(moves => {
+			const url = moves.move.url
+			fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				let moveName = data.names[5].name
+				listMoves.innerHTML += `<option value='${moveName}'>${moveName}</option>`
+			})
+		})
+
+		listMoves.classList.add('activeListMoves')
 		
 		data.types.map(types => {
 			listTypes.innerHTML += `<li>${types.type.name}</li>`

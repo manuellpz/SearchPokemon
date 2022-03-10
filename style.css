@@ -27,7 +27,7 @@ p,#txtSearch,label {
 }
 
 #pkmImage {
-	width:50%;
+	width:80%;
 	display: block;
 	margin: auto;
 }
@@ -35,6 +35,16 @@ p,#txtSearch,label {
 #listTypes {
 	display:flex;
 	flex-flow: column wrap;
+}
+#listMoves {
+	padding:10px;
+	display:none;
+	border:1px solid silver;
+	border-radius:8px;
+}
+.activeListMoves {
+	display:block !important;
+	margin:auto;
 }
 
 #listTypes > li {
